@@ -1,0 +1,268 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameGuru</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+  </head>
+
+  <body>
+    <nav class="nav-top">
+      <div class="nav-left">
+        <img src="/images final/logo.png" alt="" />
+        <div><a href="/">GAMER GURU</a></div>
+      </div>
+      <ul>
+        <li class="nav-centre"><a href="/booking">BOOK YOUR SESSION</a></li>
+        <li class="nav-centre"><a href="/tournamentpage">TOURNAMENTS</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="nav-left">
+          <button id="loginButton" class="lclick"><a href="/login">LOG IN</a></button>
+
+          <button id="signupButton" class="sclick"><a href="/signin">SIGN UP</a></button>
+
+          <button id="logoutButton" onclick="{logoutUser}" class="loclick">
+           Log Out
+          </button>
+        </div>
+      </div>
+    </nav>
+    <section class="section-top">
+      <h1>YOUR ACHIEVEMENTS<span> UNLOCKED</span></h1>
+      <p>
+        Learn from the industry's best coaches at Gamer Guru, the world's
+        premier
+        <br />
+        esports coaching platform. Start your journey and unlock your
+        achievements.
+      </p>
+      <button><a href="/booking"> BOOK YOUR SESSION </a></button>
+    </section>
+    <section class="grid">
+      <div class="column">
+        <img src="images final/scout.png" alt="image1" />
+        <h2>SKILLS <span>ASSESSMENT</span></h2>
+        <p>Start your journey with a 30-minute evaluation of your gaming skills
+          from an Expert Sensei and receive a personalized plan to improve.</p>
+      </div>
+      <div class="column">
+        <img src="/images final/mortal.png" alt="image2" />
+        <h2>ONE-ON-ONE <span>COACHING</span></h2>
+        <p>Step into a live, one-on-one 60-minute training session designed to
+          help you improve your personal skills in the specific genre and game
+          of your choice.</p>
+      </div>
+      <div class="column">
+        <img src="/images final/payal.png" alt="image3" />
+        <h2>TEAM <span>SESSIONS</span></h2>
+        <p>Squad up, dive deep into team tactics, and learn how to communicate,
+          coordinate, and dominate on the virtual battlefield from a certified
+          Sensei.</p>
+      </div>
+    </section>
+    <hr class="grid-hr" />
+    <!-- This section is for  cards and dropdown button (start) -->
+    <div class="drop_down_back">
+      <div id="DROP_DOWN">
+        <span class="custom-dropdown big">
+          <h3 class="step"> Step 1</h3>
+          <select
+            class="dropmenu"
+            name="slct1"
+            id="slct1"
+            onchange="populate(this.id, 'slct2')"
+          >
+            <div>
+              <option value=""> CHOOSE THE GAME</option>
+              <option value="FORTNITE">FORTNITE</option>
+              <option value="LEAGUE OF LEGENDS">LEAGUE OF LEGENDS</option>
+              <option>DOTA 2</option>
+              <option>HEARTHSTONE</option>
+              <option>COUNTER-STRIKE</option>
+              <option>PUBG</option>
+              <option>STARCRAFT II</option>
+              <option>OVERWATCH</option>
+              <option>WORLD OF TANKS</option>
+              <option>HEROES OF THE STORM</option>
+              <option>MAGIC</option>
+              <option>APEX LEGENDS</option>
+              <option>ROCKET LEAGUE</option>
+              <option>VALORANT</option>
+              <option>SUPER SMASH BROS</option>
+              <option>CALL OF DUTY</option>
+              <option>SMITE</option>
+              <option>TEAMFIGHT TACTICS</option>
+              <option>MEET OUR SENSEI</option>
+            </div>
+          </select>
+        </span>
+
+        <span class="custom-dropdown big">
+          <h3 class="step"> Step 2</h3>
+          <select
+            onchange="populate2(this.id, 'slct3')"
+            name="slct2"
+            id="slct2"
+          >
+            <option value=""> CHOOSE THE GAME</option>
+          </select>
+        </span>
+
+        <span class="custom-dropdown big">
+          <h3 class="step"> Step 3</h3>
+          <select onChange="SelectRedirect();" name="slct3" id="slct3">
+            <option value=""> CHOOSE THE GAME</option>
+
+          </select>
+        </span>
+
+      </div>
+    </div>
+
+    <!-- This section is for  cards and dropdown button (End) -->
+
+    <section class="section-mid">
+      <h1>MEET OUR <span>GURU</span></h1>
+      <img src="/images final/collection.png" alt="OUR GURU" />
+      <p>Our certified Guru are experienced teachers recognized for their
+        success on the world stage. Each Guru is vetted using a proprietary
+        process to meet our world-class standard and onboarded by a renowned
+        esports psychologist, ensuring universal quality care and support across
+        our vast network of trainers and services.They know the games, the maps,
+        the mechanics, and the secrets to success.</p>
+    </section>
+    <section class="slider">
+      <div class="container">
+        <!-- <img src="/images final/vishesh.png" alt=""> -->
+        <div class="content">
+          <h2>
+            WHAT THE
+            <span>PLAYERS</span>
+            ARE SAYING
+          </h2>
+          <div class="allslide">
+
+            <div class="slide current-slide fade">
+              <img src="/images final/vishesh.png" alt="" />
+              <p class="text1">
+                I got in touch with some of the best players who have ever
+                played this game, got to talk to them about the scene in
+                different countries, their personal experiences
+              </p>
+              <h3 class="text1">
+                Vishesh Garg
+              </h3>
+            </div>
+            <div class="slide fade">
+              <img src="/images final/vishesh 2.jpg" alt="" />
+              <p class="text2">
+                and just very good people to know from around the world and of
+                course each one taught me something new and interesting about
+                the game.
+              </p>
+              <h3 class="text2">
+                Parveen Siwach
+              </h3>
+            </div>
+            <div class="slide fade">
+              <img src="/images final/vishesh 3.jpg" alt="" />
+              <p class="text3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Adipisci maiores explicabo numquam, eius debitis ullam,
+                cupiditate vitae, facere sunt vero ut commodi rem obcaecati
+                voluptates quaerat. Aspernatur perspiciatis natus recusandae!
+              </p>
+              <h3 class="text3">
+                Nitish Kuntal
+              </h3>
+            </div>
+            <div class="slide">
+              <img src="/images final/vishesh 4.jpg" alt="" />
+              <p class="text4">
+                I got in touch with some of the best players who have ever
+                played this game, got to talk to them about the scene in
+                different countries, their personal experiences and just very
+                good people to know from around the world and of course each one
+                taught me something new and interesting about the game.
+              </p>
+              <h3 class="text4">
+                Apoorv Mishra
+              </h3>
+            </div>
+            <div class="slide">
+              <img src="/images final/vishesh 5.jpg" alt="" />
+              <p class="text5">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem
+                nostrum qui quae temporibus, libero repellendus alias nobis
+                exercitationem architecto atque totam quia sed, suscipit
+                voluptatem!
+              </p>
+              <h3 class="text5">
+                Shreya Sheoran
+              </h3>
+            </div>
+          </div>
+          <button onclick="side_slide(-1)" class="previous">&#60</button>
+          <button onclick="side_slide(1)" class="next">&#62</button>
+        </div>
+
+      </div>
+      <div class="navigation-box">
+        <button class="navigation"></button>
+        <button class="navigation"></button>
+        <button class="navigation"></button>
+        <button class="navigation"></button>
+        <button class="navigation current-slide"></button>
+      </div>
+    </section>
+    <section class="registration">
+      <div class="form">
+        <h1>
+          REGISTER NOW TO START
+        </h1>
+        <div class="form-input">
+          <div class="email">
+            <label>Email</label><br />
+            <input type="email" name="email" />
+          </div>
+          <div class="username">
+            <label>Username</label><br />
+            <input type="text" name="username" />
+          </div>
+          <div class="password">
+            <label>Password</label><br />
+            <input type="password" name="password" />
+          </div>
+          <div class="checkbox-1 checkbox">
+            <input type="checkbox" name="terms" required />
+            <label>I agree to Gamer Guru's Terms of Conditions and Privacy
+              Policy, and am 13 years of age or older.</label>
+          </div>
+          <div class="checkbox-2 checkbox">
+            <input type="checkbox" name="notifications" required />
+            <label>I would like to receive email updates and promotions from
+              Gamer Guru.
+            </label>
+          </div>
+          <div class="submit">
+            <input type="submit" name="submit" value="SIGN UP" />
+          </div>
+        </div>
+      </div>
+      <img src="/images final/carryfinal.png" alt="" />
+    </section>
+    <footer>
+      <div class="footer-logo"><img src="/images final/logo.png" alt="" /></div>
+      <div class="footer-text">GAMER GURU</div>
+      <div class="footer-copyright">© 2022 Gamer Sensei. All Rights Reserved.</div>
+    </footer>
+    <script src="js/home.js"></script>
+    <script src="js/logout.js"></script>
+  </body>
+
+</html>

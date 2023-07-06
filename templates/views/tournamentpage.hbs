@@ -1,0 +1,248 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameGuru</title>
+    <link rel="stylesheet" href="css/tournamentpage.css" />
+  </head>
+
+  <body>
+    <nav class="nav-top">
+      <div class="nav-left">
+        <img src="/images final/logo.png" alt="" />
+        <div><a href="/">GAMER GURU</a></div>
+      </div>
+      <ul>
+        <li class="nav-centre"><a href="/booking">BOOK YOUR SESSION</a></li>
+        {{! <li class="nav-centre"><a href="">TOURNAMENTS</a></li> }}
+      </ul>
+      <div class="nav-right">
+        <button id="login"><a class="lclick" href="/login">LOG IN</a></button>
+        <button id="signup"><a class="sclick" href="/signin">SIGN UP</a></button>
+      </div>
+    </nav>
+    <section class="title">
+      <h1 class="title1">GET <span> PAID</span> TO<span> PLAY</span></h1>
+      <h2 class="title2">Compete in Free and Paid entry Tournaments in just a</h2>
+      <h3 class="title3">few clicks without any additional downloads</h3>
+      <hr />
+      <div class="gamesrepeat">
+        <p>
+          Games Played On Repeat
+        </p>
+        <p>
+          --
+        </p>
+      </div>
+      <div class="prizespaid">
+        <p>
+          Total Prizes Paid Out
+        </p>
+        <p>
+          --
+        </p>
+      </div>
+    </section>
+    <section>
+      <img
+        class="tournamentmain"
+        src="/images final/tournamentimg.png"
+        alt="tournamentimg"
+      />
+
+    </section>
+    <hr class="tournament-hr" />
+    <section class="games">
+      <h1>GAMES</h1>
+      <img src="/images final/symbol.png" alt="" />
+      <p>
+        Daily tournaments for your favourite games. Build your stats & win
+        exciting prizes.
+      </p>
+    </section>
+    <section class="games-image">
+      <img src="/images final/apex(final).png" alt="" />
+      <img src="/images final/bgmi(final).png" alt="" />
+      <img src="/images final/cod(final).png" alt="" />
+      <img src="/images final/csgo(final).png" alt="" />
+      <img src="/images final/dota(final).png" alt="" />
+      <img src="/images final/fortnite(final).png" alt="" />
+    </section>
+    <hr class="games-hr" />
+
+    <section>
+      <div class="tornamentTitle">
+        <h1>Create New Tournaments</h1>
+        <img src="/images final/symbol.png" alt="" />
+        <p>
+          Daily tournaments for your favourite games. Build your stats & win
+          exciting prizes.
+        </p>
+      </div>
+
+      <div class="turnamentFrom">
+        <form class="mainFrom" action="/tornament" method="POST">
+          <div class="turnamentContent">
+            <label for="turnamentName">Tournament Name</label>
+            <input
+              type="text"
+              id="turnamentName"
+              name="turnamentName"
+              placeholder="Tournament Name"
+            />
+          </div>
+          <div class="turnamentContent">
+            <label for="game">Game</label>
+            <input type="text" id="game" name="game" placeholder="Game" />
+          </div>
+          <div class="turnamentContent">
+            <label for="date">Tournament Date</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              placeholder="Tournament Date"
+            />
+          </div>
+          <div class="turnamentContent">
+            <label for="entry_fee">Entry Fee</label>
+            <input
+              type="number"
+              id="entry_fee"
+              name="entryFee"
+              placeholder="Entry Fee"
+            />
+          </div>
+
+          <div class="submit">
+            <input type="submit" value="Add Turnament" />
+          </div>
+        </form>
+      </div>
+      <hr class="games-hr" />
+    </section>
+
+    <section class="showTurnamentsContainer">
+      <div class="tornamentTitle">
+        <h1>Turnaments</h1>
+        <img src="/images final/symbol.png" alt="" />
+        <p>
+          Daily tournaments for your favourite games. Build your stats & win
+          exciting prizes.
+        </p>
+      </div>
+
+      <div class="showTurnaments">
+
+      </div>
+
+    </section>
+
+    <footer>
+      <div class="footer-logo"><img src="/images final/logo.png" alt="" /></div>
+      <div class="footer-text">GAMER GURU</div>
+      <div class="footer-copyright">© 2022 Gamer Sensei. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var form = document.querySelector('.mainFrom');
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+      
+          var turnamentName = document.getElementById('turnamentName').value;
+          var game = document.getElementById('game').value;
+          var date = document.getElementById('date').value;
+          var entryFee = document.getElementById('entry_fee').value;
+      
+          var tournamentData = {
+            turnamentName: turnamentName,
+            game: game,
+            date: date,
+            entryFee: entryFee,
+          };
+      
+          // Send the AJAX request to the server
+          fetch('/tornament', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(tournamentData),
+          })
+          .then(function(response) {
+            if (response.ok) {
+              return response.json();
+            } else {
+              throw new Error('Error: ' + response.status);
+            }
+          })
+          .then(function(data) {
+            console.log(data);
+    
+          })
+          .catch(function(error) {
+            console.error(error);
+          });
+        });
+
+        function fetchTournamentData() {
+          fetch('/tornament')
+            .then(function(response) {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw new Error('Error: ' + response.status);
+              }
+            })
+            .then(function(data) {
+              console.log(data?.data);
+              updateUI(data?.data);
+            })
+            .catch(function(error) {
+              console.error(error);
+            });
+        }
+      
+        function updateUI(tournaments) {
+          var showTournaments = document.querySelector('.showTurnaments');
+          showTournaments.innerHTML = '';
+      
+          if (Array.isArray(tournaments)) {
+            tournaments.forEach(function(tournament) {
+              var tournamentItem = document.createElement('div');
+              tournamentItem.classList.add('tournament-item');
+      
+              var tournamentName = document.createElement('h3');
+              tournamentName.textContent = tournament?.turnamentName;
+              tournamentItem.appendChild(tournamentName);
+      
+              var game = document.createElement('p');
+              game.textContent = 'Game: ' + tournament?.game;
+              tournamentItem.appendChild(game);
+      
+              var date = document.createElement('p');
+              date.textContent = 'Date: ' + tournament.date;
+              tournamentItem.appendChild(date);
+      
+              var entryFee = document.createElement('p');
+              entryFee.textContent = 'Entry Fee: ' + tournament?.entryFee;
+              tournamentItem.appendChild(entryFee);
+      
+              showTournaments.appendChild(tournamentItem);
+            });
+          } else {
+            console.error('Invalid tournament data received');
+          }
+        }
+      
+        fetchTournamentData();
+  });
+    </script>
+    
+
+  </body>
+
+</html>

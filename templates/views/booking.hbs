@@ -1,0 +1,141 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/booking.css" />
+    <title>GameGuru</title>
+  </head>
+
+  <body>
+    <nav class="nav-top">
+      <div class="nav-left">
+        <img src="/images final/logo.png" alt="" />
+        <div><a href="/">GAMER GURU</a></div>
+      </div>
+      <ul>
+        <li style="opacity: 0;" class="nav-centre">
+          <h1>Added Item</h1>
+          <span>0</span>
+        </li>
+      </ul>
+      <div class="nav-right">
+        <div class="nav-left">
+          <button id="loginButton" class="lclick"><a href="/login">LOG IN</a></button>
+
+          <button id="signupButton" class="sclick"><a href="/signin">SIGN UP</a></button>
+
+          <button id="logoutButton" onclick="{logoutUser}" class="loclick">
+            Log Out
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="booking_section">
+      <div class="drop_down_back">
+        <div id="DROP_DOWN">
+          <span class="custom-dropdown big">
+            <h3 class="step"> Step 1</h3>
+            <select
+              class="dropmenu"
+              name="slct1"
+              id="slct1"
+              onchange="populate(this.id, 'slct2')"
+            >
+              <div>
+                <option value=""> CHOOSE THE GAME</option>
+                <option value="FORTNITE">FORTNITE</option>
+                <option value="LEAGUE OF LEGENDS">LEAGUE OF LEGENDS</option>
+                <option>DOTA 2</option>
+                <option>HEARTHSTONE</option>
+                <option>COUNTER-STRIKE</option>
+                <option>PUBG</option>
+                <option>STARCRAFT II</option>
+                <option>OVERWATCH</option>
+                <option>WORLD OF TANKS</option>
+                <option>HEROES OF THE STORM</option>
+                <option>MAGIC</option>
+                <option>APEX LEGENDS</option>
+                <option>ROCKET LEAGUE</option>
+                <option>VALORANT</option>
+                <option>SUPER SMASH BROS</option>
+                <option>CALL OF DUTY</option>
+                <option>SMITE</option>
+                <option>TEAMFIGHT TACTICS</option>
+                <option>MEET OUR SENSEI</option>
+              </div>
+            </select>
+          </span>
+
+          <span class="custom-dropdown big">
+            <h3 class="step"> Step 2</h3>
+            <select
+              onchange="populate2(this.id, 'slct3')"
+              name="slct2"
+              id="slct2"
+            >
+              <option value=""> CHOOSE THE GAME</option>
+            </select>
+          </span>
+
+          <span class="custom-dropdown big">
+            <h3 class="step"> Step 3</h3>
+            <select onChange="SelectRedirect();" name="slct3" id="slct3">
+              <option value=""> CHOOSE THE GAME</option>
+
+            </select>
+          </span>
+
+        </div>
+      </div>
+      <h1 class="text">CHOOSE YOUR <span>GAME</span> </h1>
+      <div class="games">
+        <div class="flex">
+          <div class="bg_game">
+            <span>FORTNITE</span>
+          </div>
+          <div class="bg_game">
+            <span>LEAGUE OF LEGENDS</span>
+          </div>
+          <div class="bg_game">
+            <span>DOTA 2</span>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="bg_game">
+            <span>HEARTHSTONE</span>
+          </div>
+          <div class="bg_game">
+            <span>COUNTER-STRIKE</span>
+          </div>
+          <div class="bg_game">
+            <span>PUBG</span>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="bg_game">
+            <span>STARCRAFT II</span>
+          </div>
+          <div class="bg_game">
+            <span>OVERWATCH</span>
+          </div>
+          <div class="bg_game">
+            <span>WORLD OF TANKS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-logo"><img src="/images final/logo.png" alt="" /></div>
+      <div class="footer-text">GAMER GURU</div>
+      <div class="footer-copyright">© 2022 Gamer Sensei. All Rights Reserved.</div>
+    </footer>
+    <script src="js/home.js"></script>
+
+  </body>
+
+</html>

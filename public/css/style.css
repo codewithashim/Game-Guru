@@ -1,0 +1,796 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #262626;
+}
+
+.nav-top {
+  display: flex;
+  align-items: center;
+  background-color: rgba(60, 60, 60, 0.48);
+  height: 100px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+.nav-left img {
+  width: 100px;
+  margin: -25px;
+  padding-left: 25px;
+}
+
+.nav-left div a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-top ul {
+  display: flex;
+  padding-inline-start: 0px;
+  margin: auto;
+}
+
+.nav-centre {
+  list-style: none;
+  padding: 0 10px;
+}
+
+.nav-centre a {
+  color: white;
+  text-decoration: none;
+  font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+.nav-right button {
+  margin: 0 8px;
+  font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  padding: 9px 13px;
+}
+
+.lclick {
+  border: 2px solid white;
+  background-color: #262626;
+  color: white;
+  cursor: pointer;
+}
+
+.loclick {
+  border: 2px solid white;
+  background-color: #262626;
+  color: white;
+  cursor: pointer;
+}
+
+.sclick {
+  border: 2px solid transparent;
+  background-color: #24ca2b;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.section-top {
+  text-align: center;
+}
+
+.section-top h1 {
+  font-size: 85px;
+  font-family: "Bebas Neue Pro", Helvetica, Arial, sans-serif;
+  margin: 70px;
+  font-stretch: ultra-condensed;
+  color: white;
+  margin-bottom: 45px;
+}
+
+.section-top span {
+  color: #24ca2b;
+}
+
+.section-top p {
+  width: 75%;
+  margin: 1em auto;
+  font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  line-height: 36px;
+  letter-spacing: 1.5px;
+  color: white;
+}
+
+.section-top button {
+  color: #262626;
+  border-radius: 8px;
+  background-color: #24ca2b;
+  border-color: #24ca2b;
+  padding: 22px 32px;
+  margin: 70px;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+}
+
+.grid {
+  text-align: center;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 499px 499px 499px;
+}
+
+.column {
+  margin: 0px 25px;
+  width: 449px;
+}
+
+.column img {
+  width: 449px;
+}
+
+.column h2 {
+  font-size: 32px;
+  font-family: "Bebas Neue Pro", Helvetica, Arial, sans-serif;
+  line-height: 32px;
+  letter-spacing: 1.5px;
+  color: white;
+  font-stretch: ultra-condensed;
+  margin: 30px 0px;
+}
+
+.column span {
+  color: #24ca2b;
+}
+
+.column p {
+  font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 1.5px;
+  color: white;
+  margin: 22px 22px;
+  width: 397px;
+}
+
+.grid-hr {
+  width: 60%;
+  margin: 60px auto 60px auto;
+}
+
+.nav-mid {
+  display: flex;
+  flex-direction: row;
+  background-color: #2f2f2f;
+  width: 1200px;
+  height: 103px;
+  margin: 60px auto 90px auto;
+  padding: 0 6px;
+  border-radius: 25px;
+}
+
+.section-mid {
+  text-align: center;
+}
+
+.section-mid h1 {
+  color: #ffffff;
+  font-family: "Bebas Neue Pro", Helvetica, Arial, sans-serif;
+  font-size: 70px;
+  font-stretch: ultra-condensed;
+}
+
+.section-mid span {
+  color: #24ca2b;
+}
+
+.section-mid img {
+  filter: drop-shadow(15px 15px 15px);
+}
+
+.section-mid p {
+  font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  line-height: 36px;
+  letter-spacing: 1.5px;
+  width: 900px;
+  margin: auto;
+  color: #ffffff;
+  margin-top: 60px;
+}
+
+.container {
+  width: 1200px;
+  height: 375px;
+  background-color: #3c3c3c;
+  display: flex;
+  margin: auto;
+  border-radius: 20px 0 0 20px;
+  position: relative;
+  margin-top: 100px;
+}
+
+.slide img {
+  position: absolute;
+  margin-left: 755px;
+  height: 375px;
+  margin-top: -80px;
+}
+
+.content {
+  margin: 20px;
+  width: 64%;
+  height: 88%;
+  position: absolute;
+}
+
+.container h2 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Bebas Neue Pro", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+}
+
+.container span {
+  color: #24ca2b;
+}
+
+.container p {
+  text-align: justify;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  line-height: 36px;
+  letter-spacing: 1.5px;
+}
+
+.container h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+  font-family: "Bebas Neue Pro", Helvetica, Arial, sans-serif;
+  color: #24ca2b;
+}
+
+.container button {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-left: 20px;
+  color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: #3c3c3c;
+  padding-top: 4px;
+  margin-top: 245px;
+}
+
+.allslide {
+  overflow: hidden;
+}
+
+.slide {
+  background-color: #3c3c3c;
+}
+
+.allslide div {
+  margin-right: 25px;
+  position: absolute;
+}
+
+.fade {
+  animation: fade 5s;
+}
+
+@keyframes fade {
+  form {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.navigation-box {
+  text-align: center;
+  margin: 20px;
+}
+
+.navigation {
+  width: 70px;
+  padding: 0px;
+  margin: 0px;
+  background-color: #262626;
+  border: none;
+  border-top: 2px solid #303030;
+}
+
+.navigation:hover {
+  border-top: 2px solid #6a6a6a;
+}
+
+.navigation-box button.current-slide {
+  border-top: 2px solid white;
+}
+
+.navigation-box button.current-slide:hover {
+  border-top: 2px solid white;
+}
+
+.registration {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 125px;
+}
+
+.form-input {
+  color: #ffffff;
+}
+
+.form h1 {
+  font-size: 40px;
+  font-family: "Bebas Neue Pro", Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-stretch: ultra-condensed;
+  color: #ffffff;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+.form-input label {
+  font-size: 20px;
+  font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+  margin-left: 110px;
+}
+
+.form-input input {
+  margin-left: 90px;
+  width: 554px;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  background-color: #3c3c3c;
+  border: none;
+}
+
+.password {
+  margin-bottom: 30px;
+}
+
+.checkbox {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.checkbox-1 input {
+  width: 20px;
+  height: auto;
+  margin: 0;
+  margin-left: 90px;
+}
+
+.checkbox-1 label {
+  margin: -5px 10px;
+  width: 75%;
+}
+
+.checkbox-2 input {
+  width: 20px;
+  height: auto;
+  margin: 0;
+  margin-left: 87px;
+}
+
+.checkbox-2 label {
+  margin: -5px 10px;
+  margin-left: 7px;
+  width: 75%;
+}
+
+.submit input {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 500;
+  letter-spacing: 3.5px;
+  font-stretch: ultra-condensed;
+  background-color: #24ca2b;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  background-color: #3c3c3c;
+  padding-bottom: 15px;
+}
+
+.footer-logo img {
+  width: 200px;
+  margin-bottom: -25px;
+}
+
+.footer-text {
+  font-size: 25px;
+  margin-bottom: 50px;
+  font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.lclick {
+  text-decoration: none;
+  color: white;
+}
+
+.sclick {
+  text-decoration: none;
+  color: black;
+}
+
+.big {
+  font-size: 1.2em;
+  /* height: 70px; */
+}
+/* .dropmenu{
+    height: 70px;
+    background-color: #3c3c3c;
+    color: #fff;
+} */
+.square {
+  width: 0.7em;
+  height: 0.7em;
+  margin: 0.5em;
+  display: inline-block;
+}
+
+.drop_down_back {
+  width: 75%;
+  height: 120px;
+  margin-left: 216px;
+  margin-bottom: 80px;
+  /* top: 1307px; */
+  background-color: #464646;
+  border-radius: 20px;
+}
+.step {
+  padding: 10px 0;
+  z-index: 1;
+  color: #ffff;
+}
+/* Custom dropdown */
+.custom-dropdown {
+  position: relative;
+  height: 70px;
+  display: inline-block;
+  margin: 10px;
+  padding: 0 30px;
+  /* background: #2B2929;
+        border-radius: 20px; */
+  /* margin-left: 180px; */
+
+  /* demo only */
+}
+
+.custom-dropdown select {
+  background-color: #3c3c3c;
+  color: #fff;
+  font-size: inherit;
+  padding: 0.5em;
+  padding-right: 2.5em;
+  border: 0;
+  margin: 0;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: "";
+  -webkit-appearance: button;
+  /* hide default arrow in chrome OSX */
+}
+
+.custom-dropdown::before,
+.custom-dropdown::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.custom-dropdown::after {
+  /*  Custom dropdown arrow */
+  /* content: "\25BC"; */
+  width: 250px;
+  height: 1em;
+  font-size: 0.625em;
+  line-height: 1;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -0.5em;
+}
+
+.custom-dropdown::before {
+  /*  Custom dropdown arrow cover */
+  /* width: 350px; */
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.custom-dropdown select[disabled] {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.custom-dropdown select[disabled]::after {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-dropdown::before {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.custom-dropdown::after {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.game_list {
+  display: flex;
+}
+
+button a {
+  list-style: none;
+  text-decoration: none;
+  color: #ffff;
+}
+
+/* step back */
+
+/* position: absolute;
+width: 1207px;
+height: 140px;
+left: 116px;
+top: 1307px;
+
+background: #2B2929;
+border-radius: 20px; */
+
+/* step 4 */
+
+/* position: absolute;
+width: 352px;
+height: 97px;
+left: 939px;
+top: 1329px;
+
+background: #383535;
+border-radius: 15px; */
+
+/* step2 */
+/* 
+position: absolute;
+width: 352px;
+height: 97px;
+left: 544px;
+top: 1329px;
+
+background: #383535;
+border-radius: 15px; */
+
+/* step1 */
+/* 
+position: absolute;
+width: 352px;
+height: 97px;
+left: 148px;
+top: 1331px;
+
+background: #383535;
+border-radius: 15px; */
+
+/* ꜜ */
+
+/* position: absolute;
+width: 28px;
+height: 34px;
+left: 445px;
+top: 1385px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 800;
+font-size: 57px;
+line-height: 67px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF; */
+
+/* ꜜ */
+
+/* position: absolute;
+width: 28px;
+height: 34px;
+left: 1244px;
+top: 1385px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 800;
+font-size: 57px;
+line-height: 67px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF; */
+
+/* ꜜ */
+
+/* position: absolute;
+width: 28px;
+height: 34px;
+left: 844px;
+top: 1385px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 800;
+font-size: 57px;
+line-height: 67px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF; */
+
+/* Step-1 */
+
+/* position: absolute;
+width: 97px;
+height: 36px;
+left: 158px;
+top: 1343px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 29px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF; */
+
+/* Step-2 */
+
+/* position: absolute;
+width: 97px;
+height: 36px;
+left: 557px;
+top: 1343px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 29px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF; */
+
+/* Step-3 */
+
+/* position: absolute;
+width: 97px;
+height: 36px;
+left: 959px;
+top: 1343px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 29px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF; */
+
+/* CHOOSE GAME */
+
+/* position: absolute;
+width: 229px;
+height: 22px;
+left: 133px;
+top: 1389px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 23px;
+line-height: 27px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF; */
+
+/* CHOOSE EXPERIENCE */
+
+/* position: absolute;
+width: 326px;
+height: 22px;
+left: 520px;
+top: 1389px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 23px;
+line-height: 27px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF; */
+
+/* CHOOSE TIER */
+
+/* position: absolute;
+width: 222px;
+height: 22px;
+left: 930px;
+top: 1389px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 23px;
+line-height: 27px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF; */
+
+/* Line 7 */
+/* 
+position: absolute;
+width: 75.06px;
+height: 0px;
+left: 417px;
+top: 1339px;
+
+border: 1px solid #000000;
+transform: rotate(90deg); */
+
+/* Line 8 */
+
+/* position: absolute;
+width: 75.06px;
+height: 0px;
+left: 1222px;
+top: 1339px;
+
+border: 1px solid #000000;
+transform: rotate(90deg); */
+
+/* Line 9 */
+
+/* position: absolute;
+width: 75.06px;
+height: 0px;
+left: 818px;
+top: 1339px;
+
+border: 1px solid #000000;
+transform: rotate(90deg); */

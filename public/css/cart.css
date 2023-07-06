@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #262626;
+}
+
+.nav-top {
+    display: flex;
+    align-items: center;
+    background-color: rgba(60, 60, 60, 0.48);
+    height: 100px;
+
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.nav-left img {
+    width: 100px;
+    margin: -25px;
+    padding-left: 25px;
+}
+
+.nav-left div a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-top ul {
+    display: flex;
+    padding-inline-start: 0px;
+    margin: auto;
+
+}
+
+.nav-centre {
+    list-style: none;
+    padding: 0 10px;
+    color: #24CA2B;
+
+}
+.nav-centre span{
+    opacity: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.signup {
+    border: 2px solid transparent;
+    background-color: #24CA2B;
+    font-weight: 600;
+    margin: 0 8px;
+    font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    padding: 9px 13px;
+    cursor:crosshair;
+}
+
+.nav-centre a {
+    color: white;
+    text-decoration: none;
+    font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.nav-right button {
+    margin: 0 8px;
+    font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    padding: 9px 13px;
+}
+
+#login {
+    border: 2px solid white;
+    background-color: #262626;
+    color: white;
+    text-decoration: none;
+}
+
+#signup {
+    border: 2px solid transparent;
+    background-color: #24CA2B;
+    font-weight: 600;
+}
+/* .cart_section{
+    display: flex;
+    flex-direction: column;
+} */
+.products-container{
+max-width: 650px;
+justify-content: center;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+margin-top: 50px;
+padding-bottom: 100px;
+color: #fff;
+
+}
+.products-container .icons{
+font-size: 25px;
+color: #24CA2B;
+margin-left: 10px;
+margin-right: 10px;
+cursor: pointer;
+
+}
+
+.product-header{
+    width:100%;
+    max-width: 650px;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgrey ;
+    margin: 0 auto;
+    display: flex;
+}
+.product-title{
+    width:45%;
+
+}
+.price{
+    width: 15%;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.spacebtw{
+    padding: 0 30px;
+}
+.spacebtw_more{
+    padding: 0 50px;
+}
+.quantity {
+    width: 30%;
+    display: flex;
+    align-items: center;
+
+}
+.total {
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+.products {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0 ;
+    
+}
+.product{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px 0;
+        /* margin-left: -80px; */
+}
+.basketTotalContainer{
+ margin-top: 250px;
+ display: flex;
+ justify-content: space-evenly;
+ padding: 10px 0;
+ margin-left: -230px;
+}
+.basketTotalTitle{
+    width: 150px;
+}
+.down{
+    min-width: 70px;
+    margin-top: 400px;
+    margin-left: -200px;
+    background-color: #24CA2B;
+}
+.icons{
+    width: 16px;
+    height: 16px;
+}
+.icon_remove{
+    width: 40px;
+    height: 40px;
+}
+.product img{
+    width: 100px;
+    
+}
+.pos{
+    margin-left: 500px;
+    margin-top: -200px;
+    border: 2px solid transparent;
+        background-color: #24CA2B;
+        font-weight: 600;
+}
+footer {
+    text-align: center;
+    color: white;
+    background-color: #3c3c3c;
+    padding-bottom: 15px;
+    margin-top: 100px;
+}
+
+.footer-logo img {
+    width: 200px;
+    margin-bottom: -25px;
+}
+
+.footer-text {
+    font-size: 25px;
+    margin-bottom: 50px;
+    font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+    letter-spacing: 1.5px;
+}

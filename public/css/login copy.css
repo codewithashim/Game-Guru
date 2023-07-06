@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: #262626;
+}
+.nav-top{
+    display: flex;
+    align-items: center;
+    background-color: rgba(60,60,60,0.48);
+    height: 100px;
+
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+.nav-left img{
+    width: 100px;
+    margin: -25px;
+    padding-left: 25px;
+}
+.nav-left div a{
+    text-decoration: none;
+    color: white;
+}
+
+section{
+    text-align: center;
+}
+section span{
+    color: #24CA2B;
+}
+.form-input{
+    color: #ffffff;
+    padding-top: 70px;
+    padding-right: 98px;
+}
+.email label{
+    padding-right: 300px;
+}
+.username label{
+    padding-right: 335px;
+}
+.password label{
+    padding-right: 144px;
+}
+
+.form h1{
+    font-size: 40px;
+    font-family: "Bebas Neue Pro", Helvetica, Arial, sans-serif;
+    font-stretch: ultra-condensed;
+    color: #ffffff;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+.form h2{
+    color: white;
+    text-decoration: none;
+    font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    letter-spacing: 6px;
+
+}
+.form-input label{
+    font-size: 20px;
+    font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+    
+}
+.form-input input{
+    margin-left: 90px;
+    width: 554px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px; 
+    background-color: #3c3c3c;
+    border: none;
+}
+
+.input-box{
+    width: 554px; 
+}
+.password{
+    margin-bottom: 30px;
+}
+#checkbox{
+    margin-bottom: 30px;
+}
+.checkbox-1 input{
+    width: 20px;
+    height: auto;
+    margin: 0;
+    margin-left: 90px;
+    position: relative;
+    left: 107px;
+}
+.checkbox-1 label{
+    margin: -5px 185px;
+    width: 75%;
+    position: relative;
+    left: -70px;
+
+}
+.checkbox-2 input{
+    width: 20px;
+    height: auto;
+    margin: 0;
+    margin-left: 99px;
+}
+.checkbox-2 label{
+    margin: -5px 10px;
+    margin-left: 7px;
+    width: 75%;
+}
+
+.submit input{
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+    letter-spacing: 3.5px;
+    font-stretch: ultra-condensed;
+    background-color: #24CA2B;
+}
+footer{
+    text-align: center;
+    color: white;
+    background-color: #3c3c3c;
+    padding-bottom: 15px;
+}
+.footer-logo img{
+    width: 200px;
+    margin-bottom: -25px;
+}
+.footer-text{
+    font-size: 25px;
+    margin-bottom: 50px;
+    font-family: "Helvetica Neue LT Pro", Helvetica, Arial, sans-serif;
+    letter-spacing: 1.5px;
+}

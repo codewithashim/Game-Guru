@@ -1,0 +1,75 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameGuru</title>
+    <link rel="stylesheet" href="css/signin.css" />
+  </head>
+  <body>
+    <nav class="nav-top">
+      <div class="nav-left">
+        <img src="/images final/logo.png" alt="" />
+        <div><a href="/">GAMER GURU</a></div>
+      </div>
+    </nav>
+    <section class="signup">
+      <div class="form">
+        <h1>
+          SIGN UP FOR
+          <span>GAMER GURU</span>
+        </h1>
+        <h2>CREATE AN ACCOUNT TO SCHEDULE YOUR FIRST LESSON.</h2>
+
+        <div class="form-input">
+          <form
+            action="/auth/signup"
+            method="POST"
+            onsubmit="return validation()"
+          >
+            <div class="email">
+              <label for="email">Email Address</label><br />
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div class="username">
+              <label for="username">Username</label><br />
+              <input type="text" name="username" id="username" required />
+            </div>
+            <div class="password">
+              <label for="pass">Password (at least 8 characters)</label><br />
+              <input type="password" name="password" id="pass" required />
+            </div>
+            <div class="checkbox-1 checkbox" id="checkbox">
+              <input type="checkbox" name="terms" id="box1" required />
+              <label for="box1">
+                I agree to Gamer Guru's Terms of Conditions and Privacy Policy,
+                am 13 years of age or older.
+              </label>
+            </div>
+            <div class="checkbox-2 checkbox">
+              <input type="checkbox" name="notifications" id="box2" />
+              <label for="box2">
+                I would like to receive email updates and promotions from Gamer
+                Guru.
+              </label>
+            </div>
+            <div class="submit">
+              <input type="submit" name="submit" value="SIGN UP" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-logo"><img src="/images final/logo.png" alt="" /></div>
+      <div class="footer-text">GAMER GURU</div>
+      <div class="footer-copyright">
+        © 2022 Gamer Sensei. All Rights Reserved.
+      </div>
+    </footer>
+
+    <script src="js/signup.js"></script>
+    
+  </body>
+</html>

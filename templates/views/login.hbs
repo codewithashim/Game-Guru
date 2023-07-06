@@ -1,0 +1,78 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameGuru</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+
+  <body>
+    <nav class="nav-top">
+      <div class="nav-left">
+        <img src="/images final/logo.png" alt="" />
+        <div><a href="/">GAMER GURU</a></div>
+      </div>
+    </nav>
+    <section class="signup">
+      <div class="form">
+        <h1>
+          LOG IN TO
+          <span>GAMER GURU</span>
+        </h1>
+
+        <div class="form-input">
+          <form id="loginForm" action="/auth/signin" method="POST">
+            <div class="email">
+              <label>Email Address</label><br />
+              <input type="email" name="email" id="emailInput" />
+            </div>
+            <div class="password">
+              <label>Password</label><br />
+              <input type="password" name="password" id="passwordInput" />
+            </div>
+            <div class="submit">
+              <input type="submit" value="LOGIN" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-logo"><img src="/images final/logo.png" alt="" /></div>
+      <div class="footer-text">GAMER GURU</div>
+      <div class="footer-copyright">© 2022 Gamer Sensei. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+      document.getElementById("loginForm").addEventListener("submit", async function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+    
+        const email = document.getElementById("emailInput").value;
+        const password = document.getElementById("passwordInput").value;
+        
+    
+        try {
+          const response = await fetch("/auth/signin", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ email, password })
+          });
+    
+          if (response.ok) {
+            window.location.href = "/";
+          } else {
+            const error = await response.text();
+            console.log("Login failed:", error);
+          }
+        } catch (error) {
+          console.log("An error occurred:", error);
+        }
+      });
+    </script>
+  </body>
+
+</html>

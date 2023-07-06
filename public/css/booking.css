@@ -1,0 +1,95 @@
+.booking_section{
+margin-top: 50px;
+}
+.games{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+}
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0;
+}
+.text{
+    align-items: center;
+    text-align: center;
+    font-size: 72px;
+    font-weight: 800;
+    color: #fff;
+}
+.text span{
+    color: #24CA2B;
+}
+.bg_game{
+    box-sizing: border-box;
+        width: 337px;
+        height: 73px;
+        left: 148px;
+        top: 600px;
+        background-color: #3c3c3c;
+        border: 1px solid #fff;
+        border-radius: 15px;
+
+}
+.bg_game span{
+        width: 337px;
+        height: 73px;
+        left: 148px;
+        top: 600px;
+        padding: 0 20px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    
+        color: #FFFFFF;
+}
+/* Group 2 */
+
+/* position: absolute;
+width: 337px;
+height: 73px;
+left: 148px;
+top: 600px; */
+
+
+
+/* step1 */
+
+/* box-sizing: border-box;
+
+position: absolute;
+width: 337px;
+height: 73px;
+left: 148px;
+top: 600px;
+
+background: #151615;
+border: 1px solid #2B2929;
+border-radius: 15px; */
+
+
+/* FORTNITE */
+
+/* position: absolute;
+width: 337px;
+height: 73px;
+left: 148px;
+top: 600px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 26px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF; */

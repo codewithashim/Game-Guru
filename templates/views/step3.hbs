@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameGuru</title>
+    <link rel="stylesheet" href="css/step3.css">
+</head>
+
+<body>
+    <nav class="nav-top">
+        <div class="nav-left">
+            <img src="/images final/logo.png" alt="">
+            <div><a href="/">GAMER GURU</a></div>
+        </div>
+        <ul>
+            <li class="nav-centre"><a href="/cart">Cart <span>0</span></a></li>
+        </ul>
+        <div class="nav-right">
+            {{#if loggedIn}}
+            <div class="nav-right">
+              <button id="logout" onclick={logoutUser}><a class="lclick" >LOG OUT</a></button>
+            </div>
+          {{else}}
+            <div class="nav-left">
+                <button id="login"><a class="lclick" href="/login">LOG IN</a></button>
+                <button id="signup"><a class="sclick" href="/signin">SIGN UP</a></button>
+            </div>
+          {{/if}}
+        </div>
+    </nav>
+
+    <section class="card_section">
+        <div class="card">
+            <img  src="/images/apex legends.png" alt="logo">
+            <div>
+            <p class="text">
+               <h1> Expert</h1>
+<br>                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum.
+            </p>
+            <h2 class="price">$200</h2>
+            <button class="signup"><a class="add-cart lclick" href="/payment">ADD TO CART</a></button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/Bgmi.png" alt="logo">
+            <div>
+                <p class="text">
+                    <h1> Beginner</h1>
+                    <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.
+                </p>
+                <h2 class="price">$100</h2>
+                <button class="signup"><a href="/payment" class="add-cart lclick">ADD TO CART</a></button>
+            </div>
+        </div>
+    </section>
+
+
+
+    </section>
+
+
+
+
+
+
+    <footer>
+        <div class="footer-logo"><img src="/images final/logo.png" alt=""></div>
+        <div class="footer-text">GAMER GURU</div>
+        <div class="footer-copyright">© 2022 Gamer Sensei. All Rights Reserved.</div>
+    </footer>
+    <script src="js/cart.js"></script>
+        <script src="js/logout.js"></script>
+</body>
+
+</html>

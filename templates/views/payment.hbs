@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameGuru</title>
+    {{!--
+    <link rel="stylesheet" href="css/cart.css"> --}}
+    <link rel="stylesheet" href="css/payment.css">
+</head>
+
+<body>
+    <nav class="nav-top">
+        <div class="nav-left">
+            <img src="/images final/logo.png" alt="">
+            <div><a href="/">GAMER GURU</a></div>
+        </div>
+        <ul>
+            <li class="nav-centre">
+                <h1>Added Item</h1> <span>0</span>
+            </li>
+        </ul>
+        <div class="nav-right">
+            <button id="login"><a class="lclick" href="/login">LOG IN</a></button>
+            <button id="signup"><a class="sclick" href="/signin">SIGN UP</a></button>
+            <button id="signup"><a class="sclick" href="/step3">Back</a></button>
+        </div>
+    </nav>
+    <section>
+        <div class='container'>
+            <div class='window'>
+                <div class='credit-info'>
+                    <div class='credit-info-content'>
+                        <table class='half-input-table'>
+                            <tr>
+                                <td>Please select your card: </td>
+                                <td>
+                                    <div class='dropdown' id='card-dropdown'>
+                                        <div class='dropdown-btn' id='current-card'>Visa</div>
+                                        <div class='dropdown-select'>
+                                            <ul>
+                                                <li>Master Card</li>
+                                                <li>American Express</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png'
+                        height='80' class='credit-card-image' id='credit-card-image'></img>
+                        <form class="mainFromData" action="/payment" method="POST">
+
+                            Card Number
+                            <input id="card_number" name="card_number" type="number" class='input-field'></input>
+                            Card Holder
+                            <input id="card_holder" name="card_holder" type="text" class='input-field'></input>
+                            Phone Number
+                            <input id="phone_number" name="phone_number" type="number" class='input-field'></input>
+                            Amount
+                            <input id="amount" name="amount" type="number" class='input-field'></input>
+                           
+                            <table class='half-input-table'>
+                                <tr>
+                                    <td> Expires Year
+                                        <input id="expires" type="number" name="expires" class='input-field'></input>
+                                    </td>
+                                    <td>CVC
+                                        <input id="cvc" name="cvc" type="text" class='input-field'></input>
+                                    </td>
+                                </tr>
+                            </table>
+                            <button onclick="validCard()" class='pay-btn' type="submit">Checkout</button>
+                        </form>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo"><img src="/images final/logo.png" alt=""></div>
+        <div class="footer-text">GAMER GURU</div>
+        <div class="footer-copyright">© 2022 Gamer Sensei. All Rights Reserved.</div>
+    </footer>
+    <script src="js/cart.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.querySelector('.mainFromData');
+            form.addEventListener('submit', function (event) {
+              event.preventDefault();
+          
+              var card_number = document.getElementById('card_number').value;
+              var card_holder = document.getElementById('card_holder').value;
+              var phone_number = document.getElementById('phone_number').value;
+              var expires = document.getElementById('expires').value;
+              var cvc = document.getElementById('cvc').value;
+              var amount = document.getElementById('amount').value;
+          
+              var paymentData = {
+                card_number: card_number,
+                card_holder: card_holder,
+                phone_number: phone_number,
+                expires: expires,
+                cvc: cvc,
+                amount: amount,
+              };
+          
+              // Send the AJAX request to the server
+              fetch('/payment', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(paymentData),
+              })
+                .then(function (response) {
+                  if (response.ok) {
+                    return response.json();
+                  } else {
+                    throw new Error('Error: ' + response.status);
+                  }
+                })
+                .then(function (data) {
+                  console.log(data);
+                })
+                .catch(function (error) {
+                  console.error(error);
+                })
+                .finally(function () {
+
+                  window.location.href = '/'; 
+                });
+            });
+          });
+    </script>
+    
+</body>
+
+</html>
